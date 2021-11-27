@@ -6,7 +6,7 @@ public class Jumping : MonoBehaviour
 {
 
     [SerializeField]
-    public float jumpVelocity = 7f;
+    public float jumpVelocity;
 
     [SerializeField]
     public Rigidbody rb;
@@ -29,6 +29,10 @@ public class Jumping : MonoBehaviour
         {
             jumpable = true;
         }
+        if (other.gameObject.GetComponent<CustomTags>().HasTag("Trampolin"))
+        {
+            jumpVelocity = 30f;
+        }
     }
 
     private void OnCollisionExit(Collision other)
@@ -36,6 +40,10 @@ public class Jumping : MonoBehaviour
         if (other.gameObject.GetComponent<CustomTags>().HasTag("Jumpable"))
         {
             jumpable = false;
+        }
+        if (other.gameObject.GetComponent<CustomTags>().HasTag("Trampolin"))
+        {
+            jumpVelocity = 10f;
         }
     }
 
