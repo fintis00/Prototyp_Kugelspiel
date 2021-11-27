@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class dash : MonoBehaviour
 {
+    private float xInput;
+    private float yInput;
     private Rigidbody rb;
     public float dashspeed;
     private float dashTime;
     public float startDashTime;
     private int direction;
+
+    [SerializeField]
+    public Transform cam;
 
     private void Start()
     {
@@ -18,25 +23,17 @@ public class dash : MonoBehaviour
 
     private void Update()
     {
+        
+        yInput = Input.GetAxis("Vertical");
+
+        Vector3 camF = cam.forward;
+        camF.y = 0;
+
+        camF = camF.normalized;
         if (!rb.GetComponent<realisticJump>().getGrounded())
         {
-            if(direction == 0)
-            {
-                if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-                    direction = 1;
-                }
-                else if (Input.GetKeyDown(KeyCode.RightArrow)) {
-                    direction = 2;
-                }
-                else if (Input.GetKeyDown(KeyCode.UpArrow)) {
-                    direction = 3;
-                }
-                else if (Input.GetKeyDown(KeyCode.DownArrow)) {
-                    direction = 4;
-                }
-            }
-            else
-            {
+            
+             if (Input.GetKeyDown(KeyCode.E)) {               
                 if (dashTime <= 0)
                 {
                     direction = 0;
@@ -45,17 +42,9 @@ public class dash : MonoBehaviour
                 }
                 else
                 {
+                    rb.velocity = camF.z * Vector3.forward * dashspeed;
                     dashTime -= Time.deltaTime;
-                    if (direction == 1)
-                    {
-                        rb.velocity = Vector3.left * dashspeed;
-                    } else if (direction == 2) {
-                        rb.velocity = Vector3.right * dashspeed;
-                    } else if (direction == 3) {
-                        rb.velocity = Vector3.forward * dashspeed;
-                    } else if (direction == 4) {
-                        rb.velocity = Vector3.back * dashspeed;
-                    }
+                    
                 }
             }
         }
