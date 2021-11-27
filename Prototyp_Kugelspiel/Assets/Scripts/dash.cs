@@ -24,17 +24,14 @@ public class dash : MonoBehaviour
        
 
         Vector3 camF = cam.forward;
-        Vector3 camR = cam.right;
         
         camF.y = 0;
-        camR.y = 0;
         
         camF = camF.normalized;
-        camR = camR.normalized;
         if (!rb.GetComponent<realisticJump>().getGrounded())
         {
             
-             if (Input.GetKeyDown(KeyCode.Q)) {               
+             if (Input.GetKeyDown(KeyCode.LeftShift)) {               
                 if (dashTime <= 0)
                 {
                     
