@@ -17,6 +17,11 @@ public class realisticJump : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    public bool getGrounded()
+    {
+        return grounded;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         grounded = true;
