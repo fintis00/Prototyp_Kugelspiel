@@ -28,32 +28,17 @@ public class Movement : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.GetComponent<CustomTags>().HasTag("Hindernis"))
-        {
-            ramp = false;
-            rb.GetComponent<realisticJump>().fallMultiplier = 5;
-        }
-        else if (collision.gameObject.GetComponent<CustomTags>().HasTag("Ground"))
-        {
-            ramp = false;
-            rb.GetComponent<realisticJump>().fallMultiplier = 5;
-        }
-        else if (collision.gameObject.GetComponent<CustomTags>().HasTag("Rampe"))
+        if (collision.gameObject.GetComponent<CustomTags>().HasTag("Rampe"))
         {
             ramp = true;
-            rb.GetComponent<realisticJump>().fallMultiplier = 5;
-        }
-        if (ramp)
-        {
-            mult_ramp = 1.5f;
             rb.drag = 4;
         }
         else
         {
+            ramp = false;
             rb.drag = 5;
-            mult_ramp = 1f;
-
         }
+        
     }
 
     private void Update()

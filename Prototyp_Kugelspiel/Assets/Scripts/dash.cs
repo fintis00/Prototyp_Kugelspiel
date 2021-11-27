@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class dash : MonoBehaviour
 {
-    private float xInput;
-    private float yInput;
+    
     private Rigidbody rb;
     public float dashspeed;
     private float dashTime;
     public float startDashTime;
-    private int direction;
 
     [SerializeField]
     public Transform cam;
@@ -23,28 +21,31 @@ public class dash : MonoBehaviour
 
     private void Update()
     {
-        
-        yInput = Input.GetAxis("Vertical");
+       
 
         Vector3 camF = cam.forward;
+        Vector3 camR = cam.right;
+        
         camF.y = 0;
-
+        camR.y = 0;
+        
         camF = camF.normalized;
+        camR = camR.normalized;
         if (!rb.GetComponent<realisticJump>().getGrounded())
         {
             
-             if (Input.GetKeyDown(KeyCode.E)) {               
+             if (Input.GetKeyDown(KeyCode.Q)) {               
                 if (dashTime <= 0)
                 {
-                    direction = 0;
+                    
                     dashTime = startDashTime;
                     rb.velocity = Vector3.zero;
                 }
                 else
                 {
-                    rb.velocity = camF.z * Vector3.forward * dashspeed;
+                    Vector3 impulse = camF * dashspeed;
                     dashTime -= Time.deltaTime;
-                    
+                    rb.velocity = impulse;
                 }
             }
         }

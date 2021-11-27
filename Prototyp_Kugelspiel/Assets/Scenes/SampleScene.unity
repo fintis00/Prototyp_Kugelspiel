@@ -155,9 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11075d496a443474c9d6b5e088b0c39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags:
-  - Hindernis
-  - Jumpable
+  tags: []
 --- !u!65 &164062283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -228,11 +226,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164062281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4984556, z: 0}
-  m_LocalScale: {x: 1, y: 0.0077220076, z: 1}
+  m_LocalPosition: {x: 5.3, y: 1.249, z: 4.4}
+  m_LocalScale: {x: 2, y: 2.49, z: 2}
   m_Children: []
-  m_Father: {fileID: 1274686111}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &387094940 stripped
 GameObject:
@@ -781,10 +779,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274686107}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3, y: 1.249, z: 4.4}
-  m_LocalScale: {x: 2, y: 2.49, z: 2}
-  m_Children:
-  - {fileID: 164062286}
+  m_LocalPosition: {x: 5.3, y: 2.49, z: 4.4}
+  m_LocalScale: {x: 2, y: 0.02, z: 2}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -800,7 +797,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11075d496a443474c9d6b5e088b0c39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: []
+  tags:
+  - Hindernis
+  - Jumpable
 --- !u!1 &1279700650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,6 +1995,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7257299410326242194, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
+      propertyPath: fallMultiplier
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7257299410326242195, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2004,6 +2007,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 7257299410326242216, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
+      propertyPath: startDashTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7257299410326242217, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
       propertyPath: m_RootOrder
       value: 2
