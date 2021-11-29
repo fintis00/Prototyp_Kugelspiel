@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 992f36b41308f41f1bc39908c2c27dda, type: 3}
       propertyPath: m_Name
-      value: AvatarDiffuse
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 992f36b41308f41f1bc39908c2c27dda, type: 3}
       propertyPath: m_RootOrder
@@ -74,7 +74,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 992f36b41308f41f1bc39908c2c27dda, type: 3}
   m_PrefabInstance: {fileID: 4742650054709118982}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2020887045
+--- !u!65 &-5101650982050062420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742650054709153446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.003454, y: 3.8454268, z: 2.5937126}
+  m_Center: {x: 0.0131284585, y: 1.9236418, z: 0.28951028}
+--- !u!114 &-7697660562624705405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,7 +96,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 4742650054709153446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58d05bc2e3f9db84c8d6357824eacabe, type: 3}
+  m_Script: {fileID: 11500000, guid: e66d2a587ae8bb54e8036f0f48e9fb48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npc: {fileID: 4742650054709153446}
+  player: {fileID: 7257299410326242195, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
+  respawn_point: {fileID: 6094422135050408328, guid: a901a665c9d08484cb8bce0e07b2a598, type: 3}
+--- !u!114 &-3926433696434183733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742650054709153446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11075d496a443474c9d6b5e088b0c39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags: []

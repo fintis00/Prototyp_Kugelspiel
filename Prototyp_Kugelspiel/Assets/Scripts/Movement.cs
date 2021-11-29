@@ -35,6 +35,10 @@ public class Movement : MonoBehaviour
             ramp = true;
             rb.drag = 4;
         }
+        if (collision.gameObject.GetComponent<CustomTags>().HasTag("Platte"))
+        {
+            rb.drag = 6;
+        }
         
     }
 
