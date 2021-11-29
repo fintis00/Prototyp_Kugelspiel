@@ -13,8 +13,8 @@ public class animationTest : MonoBehaviour
     private void Start()
     {
         LeanTween.moveX(npc, 1, 5).setEaseInOutSine().setLoopPingPong();
-        LeanTween.moveX(cube1, 6, 3).setEaseInOutSine().setLoopPingPong();
-        LeanTween.moveX(cube2, 6, 3).setEaseInOutSine().setLoopPingPong();
+        LeanTween.moveX(cube1, 6, 4).setEaseInOutSine().setLoopPingPong();
+        LeanTween.moveX(cube2, 6, 4).setEaseInOutSine().setLoopPingPong();
     }
 
     // Update is called once per frame
