@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour
     private float yInput;
 
     private float mult_ramp = 1f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -48,6 +49,7 @@ public class Movement : MonoBehaviour
     }
     void FixedUpdate()
     {
+        
         Vector3 camF = cam.forward;
         Vector3 camR = cam.right;
 
