@@ -59,16 +59,9 @@ public class Movement : MonoBehaviour
         camF = camF.normalized;
         camR = camR.normalized;
 
-        if (ramp && rb.velocity.y < 0)
-        {
-            mult_ramp = 0.8f;
-        }
-        else
-        {
-            mult_ramp = 1f;
-        }
+        
         Vector3 impulse = (camF * yInput + camR * xInput) * Time.deltaTime * speed;
-        impulse = impulse * speed * mult_ramp;
+        impulse = impulse * speed;
 
         if (!rb.GetComponent<Jumping>().getJumpable())
         {
