@@ -361,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 26daae648a43e4db88d0a47a293d545c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -72.600006
+      value: -11.7
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 26daae648a43e4db88d0a47a293d545c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -369,7 +369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 26daae648a43e4db88d0a47a293d545c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.8
+      value: 22.9
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 26daae648a43e4db88d0a47a293d545c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -894,7 +894,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11075d496a443474c9d6b5e088b0c39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: []
+  tags:
+  - Ground
 --- !u!1001 &784191501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1017,6 +1018,7 @@ MonoBehaviour:
   tags:
   - Hindernis
   - Jumpable
+  - Ground
 --- !u!65 &804518325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1682,6 +1684,7 @@ MonoBehaviour:
   tags:
   - Hindernis
   - Jumpable
+  - Ground
 --- !u!1 &1279700650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,7 +2409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11075d496a443474c9d6b5e088b0c39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: []
+  tags:
+  - Ground
 --- !u!1001 &1497407030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2511,6 +2515,7 @@ MonoBehaviour:
   tags:
   - Hindernis
   - Jumpable
+  - Ground
 --- !u!65 &1534315898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2697,6 +2702,7 @@ MonoBehaviour:
   tags:
   - Hindernis
   - Jumpable
+  - Ground
 --- !u!65 &1598739096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3021,6 +3027,7 @@ MonoBehaviour:
   tags:
   - Hindernis
   - Jumpable
+  - Ground
 --- !u!65 &1795267957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3625,7 +3632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 26daae648a43e4db88d0a47a293d545c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 26daae648a43e4db88d0a47a293d545c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3986,6 +3993,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 12.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5073892892854174278, guid: e0aaef060f6152c46ba4ae5bda49ff47, type: 3}
+      propertyPath: tags.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073892892854174278, guid: e0aaef060f6152c46ba4ae5bda49ff47, type: 3}
+      propertyPath: tags.Array.data[2]
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5073892892854174329, guid: e0aaef060f6152c46ba4ae5bda49ff47, type: 3}
       propertyPath: m_Name
       value: Rampe
@@ -4090,7 +4105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257299410326242217, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 7257299410326242217, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4098,7 +4113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257299410326242217, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 7257299410326242217, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
       propertyPath: m_LocalRotation.w
