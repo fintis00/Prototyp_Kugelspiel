@@ -24,7 +24,10 @@ public class realisticJump : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        grounded = true;
+        if (collision.gameObject.GetComponent<CustomTags>().HasTag("Ground"))
+        {
+            grounded = true;
+        }
     }
 
     private void OnCollisionExit(Collision collision)
@@ -34,7 +37,7 @@ public class realisticJump : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (!grounded)
+        if (!getGrounded())
         {
             if (rb.velocity.y < 0)
             {
