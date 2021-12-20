@@ -11,6 +11,7 @@ public class realisticJump : MonoBehaviour
 
     Rigidbody rb;
 
+    [SerializeField]
     private bool grounded = false;
     void Awake()
     {
@@ -32,7 +33,10 @@ public class realisticJump : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        grounded = false;
+        if (collision.gameObject.GetComponent<CustomTags>().HasTag("Ground"))
+        {
+            grounded = false;
+        }
     }
     void FixedUpdate()
     {

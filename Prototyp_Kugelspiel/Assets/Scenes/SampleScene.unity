@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2701,8 +2701,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tags:
   - Hindernis
-  - Jumpable
   - Ground
+  - Jumpable
 --- !u!65 &1598739096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3026,8 +3026,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tags:
   - Hindernis
-  - Jumpable
   - Ground
+  - NotJumpable
 --- !u!65 &1795267957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3150,7 +3150,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.8, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1894478743
 MeshRenderer:
@@ -3959,7 +3959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5073892892854174274, guid: e0aaef060f6152c46ba4ae5bda49ff47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8718954
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5073892892854174274, guid: e0aaef060f6152c46ba4ae5bda49ff47, type: 3}
       propertyPath: m_LocalPosition.z

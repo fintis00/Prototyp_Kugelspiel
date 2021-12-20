@@ -28,16 +28,17 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
         ramp = false;
         rb.drag = 4;
         if (collision.gameObject.GetComponent<CustomTags>().HasTag("Rampe"))
         {
             ramp = true;
-            rb.drag = 3;
+            rb.drag = 4;
         }
         if (collision.gameObject.GetComponent<CustomTags>().HasTag("Platte"))
         {
-            rb.drag = 5;
+            rb.drag = 4;
         }
         
     }

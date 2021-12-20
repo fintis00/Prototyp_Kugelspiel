@@ -57,6 +57,7 @@ public class TPSCamera : MonoBehaviour
             cam.transform.position = camHit.point;
             cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, cam.transform.localPosition.z + 0.1f);
         }
+        
         //Clean up
         Destroy(obj);
 

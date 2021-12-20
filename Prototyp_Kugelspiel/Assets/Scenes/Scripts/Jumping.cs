@@ -11,6 +11,7 @@ public class Jumping : MonoBehaviour
     [SerializeField]
     public Rigidbody rb;
 
+    [SerializeField]
     private bool jumpable = false;
     void Start()
     {
@@ -47,10 +48,9 @@ public class Jumping : MonoBehaviour
         }
     }
 
-
     void Update()
     {
-
+       
         if (Input.GetButtonDown("Jump") && jumpable)
         {
             rb.velocity = Vector3.up * (jumpVelocity + rb.velocity.y);
