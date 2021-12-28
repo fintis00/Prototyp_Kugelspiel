@@ -10,51 +10,33 @@ public class Jumping : MonoBehaviour
 
     [SerializeField]
     public Rigidbody rb;
-
     [SerializeField]
-    private bool jumpable = false;
+    public GameObject player;
+
+    public bool grounded;
+
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    public bool getJumpable()
+    private void OnCollisionEnter(Collision collision)
     {
-        return jumpable;
+        grounded = true;
+
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-
-        if (other.gameObject.GetComponent<CustomTags>().HasTag("Jumpable"))
-        {
-            jumpable = true;
-        }
-        if (other.gameObject.GetComponent<CustomTags>().HasTag("Trampolin"))
-        {
-            jumpVelocity = 30f;
-        }
-    }
-
-    private void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.GetComponent<CustomTags>().HasTag("Jumpable"))
-        {
-            jumpable = false;
-        }
-        if (other.gameObject.GetComponent<CustomTags>().HasTag("Trampolin"))
-        {
-            jumpVelocity = 10f;
-        }
-    }
-
+    
     void Update()
     {
        
-        if (Input.GetButtonDown("Jump") && jumpable)
+        if (Input.GetButtonDown("Jump")&& grounded)
         {
+            grounded = false;
             rb.velocity = Vector3.up * (jumpVelocity + rb.velocity.y);
 
         }
+        
     }
 }

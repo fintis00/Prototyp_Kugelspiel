@@ -3027,7 +3027,7 @@ MonoBehaviour:
   tags:
   - Hindernis
   - Ground
-  - NotJumpable
+  - Jumpable
 --- !u!65 &1795267957
 BoxCollider:
   m_ObjectHideFlags: 0

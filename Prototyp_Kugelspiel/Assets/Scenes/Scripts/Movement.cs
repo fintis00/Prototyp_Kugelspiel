@@ -11,37 +11,21 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private Rigidbody rb;
 
-    [SerializeField]
-    private bool ramp = false;
+    
 
     public Transform cam;
 
     private float xInput;
     private float yInput;
 
-    private float mult_ramp = 1f;
+   
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-
-        ramp = false;
-        rb.drag = 4;
-        if (collision.gameObject.GetComponent<CustomTags>().HasTag("Rampe"))
-        {
-            ramp = true;
-            rb.drag = 4;
-        }
-        if (collision.gameObject.GetComponent<CustomTags>().HasTag("Platte"))
-        {
-            rb.drag = 4;
-        }
-        
-    }
+    
 
     private void Update()
     {
@@ -63,11 +47,7 @@ public class Movement : MonoBehaviour
         
         Vector3 impulse = (camF * yInput + camR * xInput) * Time.deltaTime * speed;
         impulse = impulse * speed;
-
-        if (!rb.GetComponent<Jumping>().getJumpable())
-        {
-            impulse *= 0.8f;
-        }
+        
         rb.AddForce(impulse);
     }
 }

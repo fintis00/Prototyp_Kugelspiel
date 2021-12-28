@@ -28,7 +28,7 @@ public class dash : MonoBehaviour
         camF.y = 0;
         
         camF = camF.normalized;
-        if (!rb.GetComponent<realisticJump>().getGrounded())
+        if (!rb.GetComponent<Jumping>().grounded)
         {
             
              if (Input.GetKeyDown(KeyCode.LeftShift)) {               

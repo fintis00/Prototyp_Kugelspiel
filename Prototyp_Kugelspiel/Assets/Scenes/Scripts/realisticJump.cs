@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,38 +10,21 @@ public class realisticJump : MonoBehaviour
     public float lowJumpMultiplier;
 
     Rigidbody rb;
-
     [SerializeField]
-    private bool grounded = false;
+    GameObject player;
+    
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    public bool getGrounded()
-    {
-        return grounded;
-    }
+   
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.GetComponent<CustomTags>().HasTag("Ground"))
-        {
-            grounded = true;
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.GetComponent<CustomTags>().HasTag("Ground"))
-        {
-            grounded = false;
-        }
-    }
+    
     void FixedUpdate()
     {
 
-        if (!getGrounded())
+        if (!player.GetComponent<Jumping>().grounded)
         {
             if (rb.velocity.y < 0)
             {
