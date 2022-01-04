@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Points : MonoBehaviour
 {
-    public int points = 0;
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(10, 10, 100, 20), "Score : " + points);
-    }
+    //public int points = 0;
+    //private void OnGUI()
+    //{
+    //    GUI.Label(new Rect(10, 10, 100, 20), "Score : " + points);
+    //}
 
-    
+
+
+
+
+    //PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") + 500);
+
+
 }
