@@ -31,7 +31,7 @@ public class dash : MonoBehaviour
         if (!rb.GetComponent<Jumping>().grounded)
         {
             
-             if (Input.GetKeyDown(KeyCode.LeftShift)) {               
+             if (Input.GetKeyDown(KeyCode.Q)) {               
                 if (dashTime <= 0)
                 {
                     

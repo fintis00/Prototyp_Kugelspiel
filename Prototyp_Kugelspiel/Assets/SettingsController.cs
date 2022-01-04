@@ -15,7 +15,7 @@ public class SettingsController : MonoBehaviour
         
     }
 
-    public void zurück()
+    public void zurueck()
     {
         SettingsUI.SetActive(false);
         PauseMenuUI.SetActive(true);
