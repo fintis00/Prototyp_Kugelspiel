@@ -18,8 +18,6 @@ public class saphiremovement : MonoBehaviour
         if(gameObject.transform.position.y == -3)
         {
             endScreen.SetActive(true);
-            
-
         }
     }
 
