@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinCollector : MonoBehaviour
 {
     [SerializeField]
-    int amount = 1;
+    public int amount = 1;
     //public static List namesOfDestroyedObjects = new List();
 
 
     void Start()
     {
+        //PlayerPrefs.SetInt("Coins", 0);
         //if (namesOfDestroyedObjects.Count > 0)
         //{
 
@@ -30,13 +32,15 @@ public class CoinCollector : MonoBehaviour
         if (collision.gameObject.GetComponent<CustomTags>().HasTag("Player"))
         {
             FindObjectOfType<AudioManager>().Play("CoinCollect");
-            PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") + amount);
-        //    collision.gameObject.GetComponent<Points>().points += amount;
+            PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins",0)+1);
+            PlayerPrefs.SetInt("CoinsIntern",PlayerPrefs.GetInt("CoinsIntern",0)+1);
+            //    collision.gameObject.GetComponent<Points>().points += amount;
             print("=====Coins store logic====");
             Destroy(gameObject);
 
             
             //namesOfDestroyedObjects.Add(this.gameObject.name);
+            
 
         }
     }

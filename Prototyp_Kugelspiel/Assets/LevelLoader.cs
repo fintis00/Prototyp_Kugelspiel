@@ -25,6 +25,7 @@ public class LevelLoader : MonoBehaviour
             //Invoke("DropFunc", 1.0f);
             if (Input.GetKeyDown(KeyCode.E))
             {
+                PlayerPrefs.DeleteAll();
                 SceneManager.LoadScene(n);
                 print("E key was pressed");
             }

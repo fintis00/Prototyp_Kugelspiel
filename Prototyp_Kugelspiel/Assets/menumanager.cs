@@ -11,6 +11,7 @@ public class menumanager : MonoBehaviour
     int chk = 0;
     public GameObject Gate456;
     public GameObject Gate789;
+    public GameObject wall;
 
     public int level456 = 100;
     public int level789 = 100;
@@ -30,6 +31,7 @@ public class menumanager : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("Coins", 0) >= level456)
             {
+                Destroy(wall);
                 GameObject.Destroy(Gate456);
                 print("Destoryed the gate");
                 chk = 1;
