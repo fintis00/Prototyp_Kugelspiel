@@ -29,10 +29,13 @@ public class CoinCollector : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<CustomTags>().HasTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("CoinCollect");
             PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") + amount);
         //    collision.gameObject.GetComponent<Points>().points += amount;
             print("=====Coins store logic====");
             Destroy(gameObject);
+
+            
             //namesOfDestroyedObjects.Add(this.gameObject.name);
 
         }
