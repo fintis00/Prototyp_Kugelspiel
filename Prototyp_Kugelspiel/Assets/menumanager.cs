@@ -33,13 +33,13 @@ public class menumanager : MonoBehaviour
             {
                 Destroy(wall);
                 GameObject.Destroy(Gate456);
-                print("Destoryed the gate");
+                print("Destroyed the gate");
                 chk = 1;
             }
             if (PlayerPrefs.GetInt("Coins", 0) >= level789)
             {
                 GameObject.Destroy(Gate789);
-                print("Destoryed the gate");
+                print("Destroyed the gate");
                 chk = 1;
             }
         }

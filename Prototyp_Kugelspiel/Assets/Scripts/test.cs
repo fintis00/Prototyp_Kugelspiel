@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class test : MonoBehaviour
 {
-    public Text coinsText;
+    public Text gesamt_coins;
     public int gesamt;
     
     // Start is called before the first frame update
@@ -14,10 +14,10 @@ public class test : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("Coins"))
         {
-            Debug.Log(PlayerPrefs.GetInt("Scene", 0));
+            
             if (PlayerPrefs.GetInt("Scene", 0) == 2)
             {
-                Debug.Log(PlayerPrefs.GetInt("Scene", 0));
+               
                 if (FindObjectOfType<array>().scores[1] < PlayerPrefs.GetInt("Coins", 0))
                 {
                     FindObjectOfType<array>().scores[1] = PlayerPrefs.GetInt("Coins", 0);
@@ -30,23 +30,13 @@ public class test : MonoBehaviour
                     FindObjectOfType<array>().scores[0] = PlayerPrefs.GetInt("Coins", 0);
                 }
             }
-
-
-
-            int i = PlayerPrefs.GetInt("Coins", 0);
-            Debug.Log(i);
-            
-
-
-            
-            
         }
         foreach (int x in FindObjectOfType<array>().scores)
         {
             gesamt += x;
         }
         Debug.Log("Gesamt: " + gesamt);
-        coinsText.text = gesamt.ToString();
+        gesamt_coins.text = gesamt.ToString();
 
         Debug.LogWarning("start");
     }

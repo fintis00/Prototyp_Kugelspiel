@@ -1207,7 +1207,7 @@ GameObject:
   - component: {fileID: 213595791}
   - component: {fileID: 213595790}
   m_Layer: 5
-  m_Name: CoinsText
+  m_Name: gesamt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6150,7 +6150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf1f5631e68b1544848a4ac6d8f0129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsText: {fileID: 213595790}
+  gesamt_coins: {fileID: 213595790}
   gesamt: 0
 --- !u!1001 &1452262637
 PrefabInstance:

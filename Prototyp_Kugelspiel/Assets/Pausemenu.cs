@@ -42,6 +42,8 @@ public class Pausemenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         gameIsPaused = false;
+        
+        PlayerPrefs.DeleteKey("CoinsIntern");
         SceneManager.LoadScene("Menu");
     }
 
