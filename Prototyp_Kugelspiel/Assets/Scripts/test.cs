@@ -14,16 +14,16 @@ public class test : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("Coins"))
         {
-            Debug.Log(PlayerPrefs.GetString("Scene", ""));
-            if (PlayerPrefs.GetString("Scene", "").Equals("Level Y"))
+            Debug.Log(PlayerPrefs.GetInt("Scene", 0));
+            if (PlayerPrefs.GetInt("Scene", 0) == 2)
             {
-                Debug.Log(PlayerPrefs.GetString("Scene", ""));
+                Debug.Log(PlayerPrefs.GetInt("Scene", 0));
                 if (FindObjectOfType<array>().scores[1] < PlayerPrefs.GetInt("Coins", 0))
                 {
                     FindObjectOfType<array>().scores[1] = PlayerPrefs.GetInt("Coins", 0);
                 }
             }
-            else if(PlayerPrefs.GetString("Scene", "").Equals("Level X"))
+            else if(PlayerPrefs.GetInt("Scene", 0) == 1)
             {
                 if (FindObjectOfType<array>().scores[0] < PlayerPrefs.GetInt("Coins", 0))
                 {

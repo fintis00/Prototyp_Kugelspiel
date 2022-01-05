@@ -13,7 +13,6 @@ public class MenuM : MonoBehaviour
     void Start()
     {
         PlayerPrefs.GetInt("CoinsIntern", 0);
-        PlayerPrefs.SetString("Scene", SceneManager.GetActiveScene().name);
     }
 	
 	void Update()
