@@ -26,7 +26,6 @@ public class saphiremovement : MonoBehaviour
         camera.GetComponent<TPSCamera>().Character = player;
         endScreen.SetActive(false);
         SceneManager.LoadScene("Menu");
-
     }
 
     private void OnCollisionEnter(Collision collision)
