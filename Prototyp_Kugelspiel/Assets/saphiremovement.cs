@@ -15,7 +15,7 @@ public class saphiremovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameObject.transform.position.y == -3)
+        if(gameObject.transform.position.y == -2)
         {
             endScreen.SetActive(true);
         }
@@ -34,7 +34,7 @@ public class saphiremovement : MonoBehaviour
         if (collision.gameObject.GetComponent<CustomTags>().HasTag("Player"))
         {
             camera.GetComponent<TPSCamera>().Character = gameObject;
-            LeanTween.moveY(gameObject, -3, 5).setEaseInOutSine();
+            LeanTween.moveY(gameObject, -2, 5).setEaseInOutSine();
         }
     }
 
