@@ -7,7 +7,7 @@ using System;
 
 public class SettingsController : MonoBehaviour
 {
-    public bool s_are_open=false;
+    private bool s_are_open=false;
     [SerializeField]
     private GameObject SettingsUI;
     [SerializeField]
@@ -28,7 +28,9 @@ public class SettingsController : MonoBehaviour
         s = Array.Find(temp, sound => (sound.name).Equals("BackgroundAmbience"));
         slider.value = s.volume;
         orig_volume = s.volume;
+        volume_text.text = ((int)(volume * 100)).ToString() + "%";
     }
+
     // Update is called once per frame
     public void changeVolume(float vol)
     {
