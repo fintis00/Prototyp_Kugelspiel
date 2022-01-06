@@ -12,14 +12,14 @@ public class MenuM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.GetInt("CoinsIntern", 0);
+        PlayerPrefs.SetInt("Coins", 0);
     }
 	
 	void Update()
     {
         if (SceneManager.GetActiveScene().name != "Menu")
         {
-            coinsText.text = PlayerPrefs.GetInt("CoinsIntern", 0).ToString();
+            coinsText.text = PlayerPrefs.GetInt("Coins", 0).ToString();
         }
     }
 

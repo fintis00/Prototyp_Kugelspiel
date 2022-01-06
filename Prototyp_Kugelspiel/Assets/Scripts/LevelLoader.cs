@@ -26,7 +26,6 @@ public class LevelLoader : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 PlayerPrefs.DeleteAll();
-                Debug.Log("N: "+n);
                 PlayerPrefs.SetInt("Scene", n);
                 SceneManager.LoadScene(n);
                 print("E key was pressed");
