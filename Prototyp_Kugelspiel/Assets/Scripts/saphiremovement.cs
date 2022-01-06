@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class saphiremovement : MonoBehaviour
 {
 
-    public GameObject camera;
+    public GameObject cam;
 
     public GameObject endScreen;
     public GameObject player;
@@ -23,7 +23,7 @@ public class saphiremovement : MonoBehaviour
 
     public void beenden()
     {
-        camera.GetComponent<TPSCamera>().Character = player;
+        cam.GetComponent<TPSCamera>().Character = player;
         endScreen.SetActive(false);
         SceneManager.LoadScene("Menu");
     }
@@ -32,7 +32,7 @@ public class saphiremovement : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<CustomTags>().HasTag("Player"))
         {
-            camera.GetComponent<TPSCamera>().Character = gameObject;
+            cam.GetComponent<TPSCamera>().Character = gameObject;
             LeanTween.moveY(gameObject, -2, 5).setEaseInOutSine();
         }
     }

@@ -467,6 +467,7 @@ MonoBehaviour:
   Gate456: {fileID: 2138211002}
   Gate789: {fileID: 366165993}
   wall: {fileID: 1075946363}
+  cam: {fileID: 1440293404}
   level456: 25
   level789: 40
 --- !u!4 &46779042

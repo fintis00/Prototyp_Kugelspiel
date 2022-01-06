@@ -14,30 +14,20 @@ public class test : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("Coins"))
         {
+            int level = PlayerPrefs.GetInt("Scene", 0)-1;
+
+
+            if (FindObjectOfType<array>().scores[level] < PlayerPrefs.GetInt("Coins", 0))
+            {
+                FindObjectOfType<array>().scores[level] = PlayerPrefs.GetInt("Coins", 0);
+            }
             
-            if (PlayerPrefs.GetInt("Scene", 0) == 2)
-            {
-               
-                if (FindObjectOfType<array>().scores[1] < PlayerPrefs.GetInt("Coins", 0))
-                {
-                    FindObjectOfType<array>().scores[1] = PlayerPrefs.GetInt("Coins", 0);
-                }
-            }
-            else if(PlayerPrefs.GetInt("Scene", 0) == 1)
-            {
-                if (FindObjectOfType<array>().scores[0] < PlayerPrefs.GetInt("Coins", 0))
-                {
-                    FindObjectOfType<array>().scores[0] = PlayerPrefs.GetInt("Coins", 0);
-                }
-            }
         }
         foreach (int x in FindObjectOfType<array>().scores)
         {
             gesamt += x;
         }
-        Debug.Log("Gesamt: " + gesamt);
+        
         gesamt_coins.text = gesamt.ToString();
-
-        Debug.LogWarning("start");
     }
 }
