@@ -40,7 +40,9 @@ public class SettingsController : MonoBehaviour
 
     public void zurueck()
     {
-        s_are_open= false;
+        Sound[] temp = FindObjectOfType<AudioManager>().sounds;
+        s = Array.Find(temp, sound => (sound.name).Equals("BackgroundAmbience"));
+        s_are_open = false;
         s.volume = volume;
         SettingsUI.SetActive(false);
         PauseMenuUI.SetActive(true);
