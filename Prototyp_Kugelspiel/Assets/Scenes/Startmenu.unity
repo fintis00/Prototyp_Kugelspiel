@@ -269,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
       propertyPath: sounds.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
       propertyPath: sounds.Array.data[2].clip
@@ -280,12 +280,32 @@ PrefabInstance:
       value: LavaDeath
       objectReference: {fileID: 0}
     - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a4610fba01d0f4468a08062ab19d8479, type: 3}
+    - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
+      propertyPath: sounds.Array.data[3].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Level1
+      objectReference: {fileID: 0}
+    - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
       propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
       propertyPath: sounds.Array.data[2].volume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 328138943566809673, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
       propertyPath: m_RootOrder

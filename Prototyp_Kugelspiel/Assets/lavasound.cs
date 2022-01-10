@@ -11,6 +11,7 @@ public class lavasound : MonoBehaviour
         if (collision.gameObject.GetComponent<CustomTags>().HasTag("Player"))
         {
             FindObjectOfType<AudioManager>().Play("LavaDeath");
+           
         }
     }
 }
