@@ -18,6 +18,10 @@ public class saphiremovement : MonoBehaviour
         if(gameObject.transform.position.y == -2)
         {
             endScreen.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                beenden();
+            }
         }
     }
 
@@ -26,6 +30,7 @@ public class saphiremovement : MonoBehaviour
         cam.GetComponent<TPSCamera>().Character = player;
         endScreen.SetActive(false);
         SceneManager.LoadScene("Menu");
+        FindObjectOfType<AudioManager>().Play("Background_Ambience");
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -34,7 +39,6 @@ public class saphiremovement : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Stop("Level1");
             FindObjectOfType<AudioManager>().Play("Level1_win");
-            Debug.Log("Musik stop");
             cam.GetComponent<TPSCamera>().Character = gameObject;
             LeanTween.moveY(gameObject, -2, 4).setEaseInOutSine();
         }
