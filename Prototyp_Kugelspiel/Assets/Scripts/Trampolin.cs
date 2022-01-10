@@ -18,6 +18,7 @@ public class Trampolin : MonoBehaviour
         if (other.GetComponent<CustomTags>().HasTag("Player"))
         {
             other.GetComponent<Jumping>().jumpVelocity = 10;
+            FindObjectOfType<AudioManager>().Play("trampolin");
         }
     }
     

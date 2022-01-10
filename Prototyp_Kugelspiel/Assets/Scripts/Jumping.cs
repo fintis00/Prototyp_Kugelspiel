@@ -33,6 +33,7 @@ public class Jumping : MonoBehaviour
        
         if (Input.GetButtonDown("Jump")&& grounded)
         {
+            FindObjectOfType<AudioManager>().Play("jump");
             grounded = false;
             rb.velocity = Vector3.up * (jumpVelocity + rb.velocity.y);
 

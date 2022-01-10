@@ -18,6 +18,7 @@ public class bluebutton : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
+        FindObjectOfType<AudioManager>().Play("button");
         GameObject.Find("Cube").GetComponent<MovePlatform>().enabled = true;
         Destroy(gameObject);
     }

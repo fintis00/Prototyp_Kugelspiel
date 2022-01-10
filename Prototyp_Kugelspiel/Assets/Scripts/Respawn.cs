@@ -10,6 +10,7 @@ public class Respawn : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        FindObjectOfType<AudioManager>().Play("death");
         collision.gameObject.transform.position = respawn_point.transform.position;
     }
 }
