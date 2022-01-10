@@ -44,4 +44,10 @@ public class AudioManager : MonoBehaviour
         Debug.Log("Sound: "+ name + " is playing");
         s.source.Play();
     }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Stop();
+    }
 }

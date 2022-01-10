@@ -32,6 +32,7 @@ public class saphiremovement : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<CustomTags>().HasTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Stop("");
             cam.GetComponent<TPSCamera>().Character = gameObject;
             LeanTween.moveY(gameObject, -2, 5).setEaseInOutSine();
         }

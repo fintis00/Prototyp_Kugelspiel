@@ -56,3 +56,9 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 0
+  - name: LavaDeath
+    clip: {fileID: 8300000, guid: 47b733379db01954a9031f67b58bf5e2, type: 3}
+    volume: 0.301
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
