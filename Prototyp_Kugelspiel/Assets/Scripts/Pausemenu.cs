@@ -43,7 +43,7 @@ public class Pausemenu : MonoBehaviour
         Time.timeScale = 1f;
         gameIsPaused = false;
         FindObjectOfType<AudioManager>().Stop("Level1");
-        PlayerPrefs.SetInt("Coins", 0);
+        //PlayerPrefs.SetInt("Coins", 0);
         SceneManager.LoadScene("Menu");
     }
 
