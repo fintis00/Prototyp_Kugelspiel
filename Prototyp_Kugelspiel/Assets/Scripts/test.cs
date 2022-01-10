@@ -16,6 +16,7 @@ public class test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         if (PlayerPrefs.HasKey("Coins"))
         {
             int level = PlayerPrefs.GetInt("Scene", 0)-1;
