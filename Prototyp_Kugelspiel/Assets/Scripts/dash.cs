@@ -31,7 +31,13 @@ public class dash : MonoBehaviour
         if (!rb.GetComponent<Jumping>().grounded)
         {
             
+<<<<<<< Updated upstream
              if (Input.GetKeyDown(KeyCode.LeftShift)) {               
+=======
+             if (Input.GetKeyDown(KeyCode.Q)) 
+            {
+                FindObjectOfType<AudioManager>().Play("dash");
+>>>>>>> Stashed changes
                 if (dashTime <= 0)
                 {
                     
