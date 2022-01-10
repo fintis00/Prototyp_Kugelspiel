@@ -32,10 +32,11 @@ public class saphiremovement : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<CustomTags>().HasTag("Player"))
         {
-            FindObjectOfType<AudioManager>().Stop("LevelX");
+            FindObjectOfType<AudioManager>().Stop("Level1");
+            FindObjectOfType<AudioManager>().Play("Level1_win");
             Debug.Log("Musik stop");
             cam.GetComponent<TPSCamera>().Character = gameObject;
-            LeanTween.moveY(gameObject, -2, 5).setEaseInOutSine();
+            LeanTween.moveY(gameObject, -2, 4).setEaseInOutSine();
         }
     }
 
