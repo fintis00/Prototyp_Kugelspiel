@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class test : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject punkte_L1;
+    [SerializeField]
+    private GameObject punkte_L2;
     public Text gesamt_coins;
     public int gesamt;
     
@@ -23,6 +27,10 @@ public class test : MonoBehaviour
             }
             
         }
+        int[] scores = FindObjectOfType<array>().scores;
+        Debug.Log(scores);
+        punkte_L1.GetComponent<TextMesh>().text = scores[0].ToString() + "/10";
+        punkte_L2.GetComponent<TextMesh>().text = scores[1].ToString() + "/10";
         foreach (int x in FindObjectOfType<array>().scores)
         {
             gesamt += x;
