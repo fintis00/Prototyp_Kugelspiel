@@ -7,6 +7,12 @@ public class Startmenu : MonoBehaviour
 {
     public void spiel_laden()
     {
+        PlayerPrefs.SetInt("Scene", 0);
         SceneManager.LoadScene("Menu");
+    }
+
+    public void startCredits()
+    {
+        SceneManager.LoadScene("Credits");
     }
 }

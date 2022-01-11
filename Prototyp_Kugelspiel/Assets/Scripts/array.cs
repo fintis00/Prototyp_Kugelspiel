@@ -9,15 +9,12 @@ public class array : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Hauptmenu");
         DontDestroyOnLoad(gameObject);
         scores = new int[6];
         PlayerPrefs.DeleteAll();
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

@@ -564,7 +564,31 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Projektmanagerin: \n\nProgrammierung: \n\n\n\nDesign: \n\n\nLevel Design:\n\n\nAnimation:\n\n\nSound:\n\n\nAssets:"
+  m_Text: 'Project Manager
+
+
+    Programming
+
+
+
+
+    Design
+
+
+
+    Level Design
+
+
+
+    Animation
+
+
+
+    Sound
+
+
+
+    Assets'
 --- !u!222 &1799601247
 CanvasRenderer:
   m_ObjectHideFlags: 0
