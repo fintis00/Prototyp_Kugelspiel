@@ -10,6 +10,8 @@ public class Respawn : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if(PlayerPrefs.GetInt("Coins", 0) > 0)
+            PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins", 0) -1);
         FindObjectOfType<AudioManager>().Play("death");
         collision.gameObject.transform.position = respawn_point.transform.position;
     }
