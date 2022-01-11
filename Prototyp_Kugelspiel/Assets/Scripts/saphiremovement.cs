@@ -30,13 +30,13 @@ public class saphiremovement : MonoBehaviour
         cam.GetComponent<TPSCamera>().Character = player;
         endScreen.SetActive(false);
         SceneManager.LoadScene("Menu");
-        FindObjectOfType<AudioManager>().Play("Background_Ambience");
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<CustomTags>().HasTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Stop("Level1_background");
             FindObjectOfType<AudioManager>().Stop("Level1");
             FindObjectOfType<AudioManager>().Play("Level1_win");
             cam.GetComponent<TPSCamera>().Character = gameObject;

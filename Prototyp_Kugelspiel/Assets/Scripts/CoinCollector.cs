@@ -37,7 +37,7 @@ public class CoinCollector : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("CoinCollect");
             PlayerPrefs.SetInt("Coins",PlayerPrefs.GetInt("Coins",0)+amount);
             //    collision.gameObject.GetComponent<Points>().points += amount;
-            print("=====Coins store logic====");
+            
             Destroy(gameObject);
 
             

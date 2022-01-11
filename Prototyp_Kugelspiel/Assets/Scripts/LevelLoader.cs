@@ -29,7 +29,7 @@ public class LevelLoader : MonoBehaviour
                 PlayerPrefs.SetInt("Scene", n);
                 SceneManager.LoadScene(n);
                 FindObjectOfType<AudioManager>().Play("Level" + (n));
-                print("E key was pressed");
+                FindObjectOfType<AudioManager>().Play("Level" + n + "_background");
             }
 
 
