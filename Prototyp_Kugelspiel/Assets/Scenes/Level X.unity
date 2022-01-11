@@ -4996,8 +4996,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1000248033}
   m_HandleRect: {fileID: 1441327664}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -5763,6 +5763,7 @@ MonoBehaviour:
   PauseMenuUI: {fileID: 1718980708}
   slider: {fileID: 465670775}
   volume_text: {fileID: 1937953921}
+  audiomixer: {fileID: 24100000, guid: 3e10d868c25f38046b83a5246c44385f, type: 2}
 --- !u!1 &568790693
 GameObject:
   m_ObjectHideFlags: 0

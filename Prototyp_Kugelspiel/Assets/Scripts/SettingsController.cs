@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Audio;
 
 
 public class SettingsController : MonoBehaviour
 {
-    private bool s_are_open=false;
+    
     [SerializeField]
     private GameObject SettingsUI;
     [SerializeField]
@@ -19,33 +20,22 @@ public class SettingsController : MonoBehaviour
     private float volume;
     private float orig_volume;
     private Sound s;
-
+    public AudioMixer audiomixer;
 
     private void Start()
     {
-        s_are_open = true;
-        Sound[] temp = FindObjectOfType<AudioManager>().sounds;
-        s = Array.Find(temp, sound => (sound.name).Equals("BackgroundAmbience"));
-        slider.value = s.volume;
-        orig_volume = s.volume;
+        
         volume_text.text = ((int)(volume * 100)).ToString() + "%";
     }
 
-    // Update is called once per frame
-    public void changeVolume(float vol)
+    public void changeVolume(float volume)
     {
-        volume = vol;
-        volume_text.text = ((int)(volume*100)).ToString() + "%";
-        
-
+        audiomixer.SetFloat("MyExposedParam", volume);
     }
 
     public void zurueck()
     {
-        Sound[] temp = FindObjectOfType<AudioManager>().sounds;
-        s = Array.Find(temp, sound => (sound.name).Equals("BackgroundAmbience"));
-        s_are_open = false;
-        s.volume = volume;
+        
         SettingsUI.SetActive(false);
         PauseMenuUI.SetActive(true);
     }
