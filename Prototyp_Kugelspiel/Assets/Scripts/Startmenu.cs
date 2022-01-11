@@ -14,6 +14,7 @@ public class Startmenu : MonoBehaviour
     public void startCredits()
     {
         FindObjectOfType<AudioManager>().Stop("Hauptmenu");
+        FindObjectOfType<AudioManager>().Play("Credits");
         SceneManager.LoadScene("Credits");
     }
 }

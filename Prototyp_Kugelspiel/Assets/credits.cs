@@ -8,14 +8,15 @@ public class credits : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LeanTween.moveY(gameObject,1650,12).setEaseInOutSine();
+        LeanTween.moveY(gameObject,2000,15).setEaseInOutSine();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(gameObject.transform.position.y == 1650)
+        if(gameObject.transform.position.y == 2000)
         {
+            FindObjectOfType<AudioManager>().Stop("Credits");
             SceneManager.LoadScene("Startmenu");      
         }
     }
