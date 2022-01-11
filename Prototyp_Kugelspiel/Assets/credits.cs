@@ -17,6 +17,8 @@ public class credits : MonoBehaviour
         if(gameObject.transform.position.y == 2000)
         {
             FindObjectOfType<AudioManager>().Stop("Credits");
+            PlayerPrefs.SetInt("Scene", 0);
+            FindObjectOfType<AudioManager>().Play("Hauptmenu");
             SceneManager.LoadScene("Startmenu");      
         }
     }

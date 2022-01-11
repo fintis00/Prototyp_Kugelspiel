@@ -8,7 +8,8 @@ using UnityEngine.Audio;
 
 public class SettingsController : MonoBehaviour
 {
-    
+    [SerializeField]
+    private GameObject points;
     [SerializeField]
     private GameObject SettingsUI;
     [SerializeField]
@@ -24,7 +25,6 @@ public class SettingsController : MonoBehaviour
 
     private void Start()
     {
-        
         volume_text.text = ((int)(volume * 100)).ToString() + "%";
     }
 
@@ -35,7 +35,6 @@ public class SettingsController : MonoBehaviour
 
     public void zurueck()
     {
-        
         SettingsUI.SetActive(false);
         PauseMenuUI.SetActive(true);
     }

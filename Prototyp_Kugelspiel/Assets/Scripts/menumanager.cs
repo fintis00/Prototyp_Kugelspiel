@@ -9,6 +9,7 @@ public class menumanager : MonoBehaviour
 
     public Text coins_Text;
     int chk = 0;
+    public GameObject gate1_points;
     public GameObject Gate456;
     public GameObject Gate789;
     public GameObject wall;
@@ -33,6 +34,7 @@ public class menumanager : MonoBehaviour
             if (cam.GetComponent<test>().gesamt >= level456)
             {
                 Destroy(wall);
+                Destroy(gate1_points);
                 GameObject.Destroy(Gate456);
                 chk = 1;
             }
