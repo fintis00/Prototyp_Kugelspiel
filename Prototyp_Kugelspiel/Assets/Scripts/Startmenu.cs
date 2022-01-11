@@ -13,6 +13,7 @@ public class Startmenu : MonoBehaviour
 
     public void startCredits()
     {
+        FindObjectOfType<AudioManager>().Stop("Hauptmenu");
         SceneManager.LoadScene("Credits");
     }
 }
