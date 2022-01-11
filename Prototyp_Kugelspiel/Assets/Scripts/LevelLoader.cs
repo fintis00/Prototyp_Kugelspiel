@@ -27,6 +27,7 @@ public class LevelLoader : MonoBehaviour
             {
                 PlayerPrefs.DeleteAll();
                 PlayerPrefs.SetInt("Scene", n);
+                Debug.Log(n);
                 SceneManager.LoadScene(n);
                 FindObjectOfType<AudioManager>().Play("Level" + (n));
                 FindObjectOfType<AudioManager>().Play("Level" + n + "_background");

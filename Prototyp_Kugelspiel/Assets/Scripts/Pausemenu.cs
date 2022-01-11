@@ -43,7 +43,7 @@ public class Pausemenu : MonoBehaviour
         Time.timeScale = 1f;
         gameIsPaused = false;
         FindObjectOfType<AudioManager>().Stop("Level1");
-        if (PlayerPrefs.GetString("Scene", "") == "Level1") {
+        if (PlayerPrefs.GetInt("Scene", 0) == 1) {
             FindObjectOfType<AudioManager>().Stop("Level1_background");
         }
         PlayerPrefs.SetInt("Coins", 0);

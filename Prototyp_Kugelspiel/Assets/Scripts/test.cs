@@ -10,6 +10,8 @@ public class test : MonoBehaviour
     private GameObject punkte_L1;
     [SerializeField]
     private GameObject punkte_L2;
+    [SerializeField]
+    private GameObject schloss1;
     public Text gesamt_coins;
     public int gesamt;
     
@@ -35,6 +37,7 @@ public class test : MonoBehaviour
         {
             gesamt += x;
         }
+        schloss1.GetComponent<TextMesh>().text = gesamt.ToString() + "/25";
         
         gesamt_coins.text = gesamt.ToString();
     }
