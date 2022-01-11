@@ -28,10 +28,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        Play("BackgroundAmbience");
-    }
+    
 
     public void Play(string name)
     {
