@@ -22,4 +22,9 @@ public class Startmenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void anleitung_auf()
+    {
+        SceneManager.LoadScene("Anleitung");
+    }
 }

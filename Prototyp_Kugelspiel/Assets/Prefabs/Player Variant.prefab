@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257299410326242195, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7257299410326242216, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
       propertyPath: cam
@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257299410326242222, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
       propertyPath: m_Drag
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7257299410326242222, guid: a8ba67af8f8ea014b86ecb7d0ef4d67e, type: 3}
       propertyPath: m_Mass
@@ -130,4 +130,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a784620f0bbe47b45a96c1a63163b78f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 0
