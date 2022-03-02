@@ -6,6 +6,7 @@ public class overworld_pause : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject PauseMenuUI;
+    public GameObject settingsUI;
     
 
     // Update is called once per frame
@@ -15,7 +16,9 @@ public class overworld_pause : MonoBehaviour
         {
 
             Pause();
+            Cursor.visible = true;
         }
+        
     }
 
     public void Resume()
@@ -23,6 +26,13 @@ public class overworld_pause : MonoBehaviour
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
+        Cursor.visible = false; 
+    }
+
+    public void LoadMenu()
+    {
+        settingsUI.SetActive(true);
+        PauseMenuUI.SetActive(false);
     }
 
     void Pause()
@@ -38,5 +48,6 @@ public class overworld_pause : MonoBehaviour
         SceneManager.LoadScene("Startmenu");
         PlayerPrefs.SetInt("Scene", -1);
         gameIsPaused=false;
+        Cursor.visible = true;
     }
 }

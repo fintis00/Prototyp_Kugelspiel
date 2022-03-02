@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: BackgroundAmbience
-    clip: {fileID: 0}
-    volume: 0.301
+  - name: Hauptmenu
+    clip: {fileID: 8300000, guid: ad6b4d1c3e5846743866ec5ef32bcac7, type: 3}
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
     loop: 1
@@ -57,8 +57,80 @@ MonoBehaviour:
     source: {fileID: 0}
     loop: 0
   - name: LavaDeath
-    clip: {fileID: 8300000, guid: 47b733379db01954a9031f67b58bf5e2, type: 3}
-    volume: 0.301
+    clip: {fileID: 8300000, guid: 5d97bdae931aaec4eb4f97c40356570a, type: 3}
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
     loop: 0
+  - name: Level1
+    clip: {fileID: 8300000, guid: a4610fba01d0f4468a08062ab19d8479, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Level1_win
+    clip: {fileID: 8300000, guid: 03eaf938c7a154e6b86f45771184e221, type: 3}
+    volume: 0.509
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: death
+    clip: {fileID: 8300000, guid: b44fdc48c1d275841a84953d15dcd994, type: 3}
+    volume: 0.165
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: button
+    clip: {fileID: 8300000, guid: 5da48ca337fd2924c98e50c02e3055a9, type: 3}
+    volume: 0.165
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: dash
+    clip: {fileID: 8300000, guid: 6d41a7a3071463844b07ae4695e82ed8, type: 3}
+    volume: 0.165
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: enter
+    clip: {fileID: 8300000, guid: 602b04e16a9f9f94b9a9531b75b8d295, type: 3}
+    volume: 0.509
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: trampolin
+    clip: {fileID: 8300000, guid: d911e47047864844c925f03889bdc9b7, type: 3}
+    volume: 0.165
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: level_complete
+    clip: {fileID: 8300000, guid: 860016c62f8d40f4ea408604fe4443fb, type: 3}
+    volume: 0.165
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: stern
+    clip: {fileID: 8300000, guid: 8d4d25ad0506223439e601df7b8527b0, type: 3}
+    volume: 0.165
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: jump
+    clip: {fileID: 8300000, guid: 560a3613d7460084b9b8491e32e7bb88, type: 3}
+    volume: 0.165
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Level1_background
+    clip: {fileID: 8300000, guid: fce0706299864d74c83d54157c3a09f9, type: 3}
+    volume: 0.033
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Credits
+    clip: {fileID: 8300000, guid: af856ff18641a4ed389faa6ef5e1b877, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1

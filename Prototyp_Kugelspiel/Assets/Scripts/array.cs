@@ -9,9 +9,7 @@ public class array : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        
         FindObjectOfType<AudioManager>().Play("Hauptmenu");
-        
         scores = new int[6];
         
         DontDestroyOnLoad(gameObject);
