@@ -17,9 +17,9 @@ public class SettingsController : MonoBehaviour
     public AudioMixer mainMixer;
 
    public void setFullscreen(bool isFullscreen)
-    {
-        Screen.fullScreen = isFullscreen;
-    }
+   {
+       Screen.fullScreen = isFullscreen;
+   }
 
     public void setQuality(int qualityIndex)
     {

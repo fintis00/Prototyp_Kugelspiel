@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Startmenu : MonoBehaviour
 {
+    public GameObject startUI;
+    public GameObject settingsUI;
     public void spiel_laden()
     {
         PlayerPrefs.SetInt("Scene", 0);
@@ -26,5 +28,11 @@ public class Startmenu : MonoBehaviour
     public void anleitung_auf()
     {
         SceneManager.LoadScene("Anleitung");
+    }
+
+    public void settings()
+    {
+        startUI.SetActive(false);
+        settingsUI.SetActive(true);
     }
 }
