@@ -42,6 +42,7 @@ public class Pausemenu : MonoBehaviour
         points.SetActive(false);
     }
 
+
     public void QuitGame()
     {
         Time.timeScale = 1f;

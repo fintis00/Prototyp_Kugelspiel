@@ -17290,6 +17290,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1289572960}
+    - target: {fileID: 4166180359924950347, guid: 595cbe6d0e257984483063434becaf4f, type: 3}
+      propertyPath: speed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4166180359924950348, guid: 595cbe6d0e257984483063434becaf4f, type: 3}
       propertyPath: cam
       value: 
