@@ -9,28 +9,25 @@ using UnityEngine.Audio;
 public class SettingsController : MonoBehaviour
 {
     [SerializeField]
-    private GameObject points;
-    [SerializeField]
     private GameObject SettingsUI;
     [SerializeField]
     private GameObject PauseMenuUI;
-    [SerializeField]
-    private Slider slider;
-    [SerializeField]
-    private Text volume_text;
-    private float volume;
-    private float orig_volume;
-    private Sound s;
-    public AudioMixer audiomixer;
+    
+    public AudioMixer mainMixer;
 
-    private void Start()
+   public void setFullscreen(bool isFullscreen)
     {
-        volume_text.text = ((int)(volume * 100)).ToString() + "%";
+        Screen.fullScreen = isFullscreen;
     }
 
-    public void changeVolume(float volume)
+    public void setQuality(int qualityIndex)
     {
-        audiomixer.SetFloat("MyExposedParam", volume);
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+
+    public void setVolume(float volume)
+    {
+        mainMixer.SetFloat("volume", volume);
     }
 
     public void zurueck()
