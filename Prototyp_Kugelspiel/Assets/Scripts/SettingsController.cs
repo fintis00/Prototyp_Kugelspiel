@@ -12,6 +12,7 @@ public class SettingsController : MonoBehaviour
     private GameObject SettingsUI;
     [SerializeField]
     private GameObject PauseMenuUI;
+    public GameObject points;
     
     public AudioMixer mainMixer;
 
@@ -34,5 +35,7 @@ public class SettingsController : MonoBehaviour
     {
         SettingsUI.SetActive(false);
         PauseMenuUI.SetActive(true);
+        points.SetActive(true);
+
     }
 }

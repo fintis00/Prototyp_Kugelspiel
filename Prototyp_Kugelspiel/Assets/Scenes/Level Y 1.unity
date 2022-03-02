@@ -1792,6 +1792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SettingsUI: {fileID: 1859948326}
   PauseMenuUI: {fileID: 146050100}
+  points: {fileID: 1950678656}
   mainMixer: {fileID: 24100000, guid: 3e10d868c25f38046b83a5246c44385f, type: 2}
 --- !u!114 &77184236
 MonoBehaviour:
@@ -10866,6 +10867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuUI: {fileID: 146050100}
   settingsUI: {fileID: 1859948326}
+  points: {fileID: 1950678656}
 --- !u!114 &539407368
 MonoBehaviour:
   m_ObjectHideFlags: 0
