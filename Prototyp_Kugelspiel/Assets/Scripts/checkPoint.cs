@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class checkPoint : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class checkPoint : MonoBehaviour
             Destroy(gameObject);
             var em = particleSystem.emission;
             em.enabled = true;
+            FindObjectOfType<AudioManager>().Play("Checkpoint");
         }
     }
 }
