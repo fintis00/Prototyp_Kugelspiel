@@ -729,7 +729,7 @@ MonoBehaviour:
   Gate789: {fileID: 645256792}
   wall: {fileID: 1075946363}
   cam: {fileID: 1440293404}
-  level456: 0
+  level456: 35
   level789: 60
 --- !u!4 &46779042
 Transform:
@@ -5485,7 +5485,6 @@ MonoBehaviour:
   dialogue_window: {fileID: 445101801}
   nameText: {fileID: 718432283}
   dialogueText: {fileID: 1844595172}
-  animator: {fileID: 445101806}
 --- !u!4 &656124358
 Transform:
   m_ObjectHideFlags: 0

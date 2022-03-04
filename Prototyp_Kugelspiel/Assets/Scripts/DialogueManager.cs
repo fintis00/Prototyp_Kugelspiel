@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
 	public Text nameText;
 	public Text dialogueText;
 
-	public Animator animator;
+
 	private Queue<string> sentences;
 
 	// Use this for initialization
@@ -23,7 +23,6 @@ public class DialogueManager : MonoBehaviour
 		Time.timeScale = 0f;
 		Cursor.visible = true;
 
-		animator.SetBool("IsOpen", true);
 		nameText.text = dialogue.name;
 
 		sentences.Clear();
@@ -32,6 +31,7 @@ public class DialogueManager : MonoBehaviour
 		{
 			sentences.Enqueue(sentence);
 		}
+		dialogue_window.SetActive(true);
 		DisplayNextSentence();
 	}
 
@@ -60,9 +60,8 @@ public class DialogueManager : MonoBehaviour
 
 	void EndDialogue()
 	{
-		Time.timeScale = 1f;
 		Cursor.visible = false;
-		animator.SetBool("IsOpen", false);
+		dialogue_window?.SetActive(false);
 	}
 
 }
