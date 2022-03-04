@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class menumanager : MonoBehaviour
 {
-
+    public Dialogue dialogue;
     public Text coins_Text;
     int chk = 0;
     public GameObject gate1_points;
@@ -37,6 +37,9 @@ public class menumanager : MonoBehaviour
                 Destroy(gate1_points);
                 GameObject.Destroy(Gate456);
                 chk = 1;
+
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+
             }
             if (cam.GetComponent<test>().gesamt >= level789)
             {
