@@ -28,6 +28,7 @@ public class saphiremovement : MonoBehaviour
     public void beenden()
     {
         FindObjectOfType<AudioManager>().Play("Hauptmenu");
+        FindObjectOfType<AudioManager>().Stop("Level3_background");
         cam.GetComponent<TPSCamera>().Character = player;
         endScreen.SetActive(false);
         SceneManager.LoadScene("Menu");

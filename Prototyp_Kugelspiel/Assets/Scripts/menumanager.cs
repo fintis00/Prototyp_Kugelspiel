@@ -45,6 +45,7 @@ public class menumanager : MonoBehaviour
             {
                 GameObject.Destroy(Gate789);
                 chk = 1;
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             }
         }
     }
