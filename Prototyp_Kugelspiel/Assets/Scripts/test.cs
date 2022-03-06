@@ -20,12 +20,11 @@ public class test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Test");
         if (PlayerPrefs.HasKey("Coins") && PlayerPrefs.HasKey("Scene"))
         {
             if (PlayerPrefs.GetInt("Scene") > 0)
             {
-                int level = PlayerPrefs.GetInt("Scene", 0) - 1;
+                int level = PlayerPrefs.GetInt("Scene", 0);
 
 
 
@@ -38,14 +37,15 @@ public class test : MonoBehaviour
             
         }
         int[] scores = FindObjectOfType<array>().scores;
-        punkte_L1.GetComponent<TextMesh>().text = scores[0].ToString() + "/17";
-        punkte_L2.GetComponent<TextMesh>().text = scores[1].ToString() + "/20";
-        punkte_L3.GetComponent<TextMesh>().text = scores[2].ToString() + "/10";
+        punkte_L1.GetComponent<TextMesh>().text = scores[1].ToString() + "/17";
+        punkte_L2.GetComponent<TextMesh>().text = scores[2].ToString() + "/20";
+        punkte_L3.GetComponent<TextMesh>().text = scores[3].ToString() + "/10";
         foreach (int x in FindObjectOfType<array>().scores)
         {
             gesamt += x;
         }
-        schloss1.GetComponent<TextMesh>().text = gesamt.ToString() + "/25";
+        gesamt -= FindObjectOfType<array>().scores[0];
+        schloss1.GetComponent<TextMesh>().text = gesamt.ToString() + "/35";
         
         gesamt_coins.text = gesamt.ToString();
     }

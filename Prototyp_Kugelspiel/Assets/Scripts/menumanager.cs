@@ -37,8 +37,11 @@ public class menumanager : MonoBehaviour
                 Destroy(gate1_points);
                 GameObject.Destroy(Gate456);
                 chk = 1;
-
-                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                if (FindObjectOfType<array>().scores[0] == 0)
+                {
+                    FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                    FindObjectOfType<array>().scores[0] = 1;
+                }
 
             }
             if (cam.GetComponent<test>().gesamt >= level789)
