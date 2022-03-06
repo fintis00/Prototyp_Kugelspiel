@@ -8,7 +8,8 @@ public class DialogueManager : MonoBehaviour
 	public GameObject dialogue_window;
 	public Text nameText;
 	public Text dialogueText;
-
+	public GameObject menu;
+	public bool boolean;
 
 	private Queue<string> sentences;
 
@@ -22,6 +23,7 @@ public class DialogueManager : MonoBehaviour
 	{
 		Time.timeScale = 0f;
 		Cursor.visible = true;
+		menu.SetActive(false);
 
 		nameText.text = dialogue.name;
 
@@ -60,8 +62,13 @@ public class DialogueManager : MonoBehaviour
 
 	void EndDialogue()
 	{
-		Cursor.visible = false;
-		dialogue_window?.SetActive(false);
+		if (!boolean)
+		{
+			Cursor.visible = false;
+		}
+		dialogue_window.SetActive(false);
+		menu.SetActive(true);
+		Time.timeScale = 1f;
 	}
 
 }
