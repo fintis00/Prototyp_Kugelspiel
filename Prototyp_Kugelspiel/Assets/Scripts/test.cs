@@ -37,7 +37,7 @@ public class test : MonoBehaviour
             
         }
         int[] scores = FindObjectOfType<array>().scores;
-        punkte_L1.GetComponent<TextMesh>().text = scores[1].ToString() + "/17";
+        punkte_L1.GetComponent<TextMesh>().text = scores[1].ToString() + "/20";
         punkte_L2.GetComponent<TextMesh>().text = scores[2].ToString() + "/20";
         punkte_L3.GetComponent<TextMesh>().text = scores[3].ToString() + "/10";
         foreach (int x in FindObjectOfType<array>().scores)
@@ -45,7 +45,7 @@ public class test : MonoBehaviour
             gesamt += x;
         }
         gesamt -= FindObjectOfType<array>().scores[0];
-        schloss1.GetComponent<TextMesh>().text = gesamt.ToString() + "/35";
+        schloss1.GetComponent<TextMesh>().text = gesamt.ToString() + "/40";
         
         gesamt_coins.text = gesamt.ToString();
     }

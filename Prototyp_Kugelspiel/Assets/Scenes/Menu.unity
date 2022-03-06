@@ -729,7 +729,7 @@ MonoBehaviour:
   Gate789: {fileID: 645256792}
   wall: {fileID: 1075946363}
   cam: {fileID: 1440293404}
-  level456: 35
+  level456: 40
   level789: 60
 --- !u!4 &46779042
 Transform:
@@ -5761,7 +5761,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694443166}
-  m_Text: 0/17
+  m_Text: 0/20
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -13820,7 +13820,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012374744}
-  m_Text: 0/25
+  m_Text: 0/40
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
