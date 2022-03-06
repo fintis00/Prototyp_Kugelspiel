@@ -42,7 +42,10 @@ public class Pausemenu : MonoBehaviour
         points.SetActive(false);
     }
 
-
+    public void confirm()
+    {
+        FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+    }
     public void QuitGame()
     {
         Time.timeScale = 1f;
@@ -53,5 +56,11 @@ public class Pausemenu : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Hauptmenu");
         SceneManager.LoadScene("Menu");
     }
+
+    public void yes()
+    {
+        QuitGame();
+    }
+    
 
 }
