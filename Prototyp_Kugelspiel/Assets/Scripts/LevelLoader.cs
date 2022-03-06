@@ -30,7 +30,6 @@ public class LevelLoader : MonoBehaviour
                 Debug.Log(n);
                 SceneManager.LoadScene(n);
                 FindObjectOfType<AudioManager>().Stop("Hauptmenu");
-                FindObjectOfType<AudioManager>().Play("Level" + (n));
                 FindObjectOfType<AudioManager>().Play("Level" + n + "_background");
             }
 

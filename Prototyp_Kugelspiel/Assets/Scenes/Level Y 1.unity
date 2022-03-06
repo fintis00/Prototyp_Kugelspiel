@@ -23916,6 +23916,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: yes
       objectReference: {fileID: 0}
+    - target: {fileID: 4977868063899573791, guid: 03cf5a25ae78a0648933480b90a9e1ac, type: 3}
+      propertyPath: m_Text
+      value: Your collected points won't be saved!
+      objectReference: {fileID: 0}
     - target: {fileID: 4977868064069382485, guid: 03cf5a25ae78a0648933480b90a9e1ac, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -24003,6 +24007,10 @@ PrefabInstance:
     - target: {fileID: 4977868064069382490, guid: 03cf5a25ae78a0648933480b90a9e1ac, type: 3}
       propertyPath: m_Name
       value: confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977868064126967571, guid: 03cf5a25ae78a0648933480b90a9e1ac, type: 3}
+      propertyPath: m_Text
+      value: Are you sure you want to quit?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03cf5a25ae78a0648933480b90a9e1ac, type: 3}

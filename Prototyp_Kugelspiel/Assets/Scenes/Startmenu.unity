@@ -808,7 +808,7 @@ PrefabInstance:
       objectReference: {fileID: 24100000, guid: 3e10d868c25f38046b83a5246c44385f, type: 2}
     - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
       propertyPath: sounds.Array.size
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
       propertyPath: sounds.Array.data[0].clip
@@ -835,6 +835,14 @@ PrefabInstance:
       value: Level3_background
       objectReference: {fileID: 0}
     - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
+      propertyPath: sounds.Array.data[17].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 330fe74db00eaaa438b9fb1a2c599f66, type: 3}
+    - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
+      propertyPath: sounds.Array.data[17].name
+      value: Level2_background
+      objectReference: {fileID: 0}
+    - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
       propertyPath: sounds.Array.data[15].pitch
       value: 1
       objectReference: {fileID: 0}
@@ -843,11 +851,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
+      propertyPath: sounds.Array.data[17].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
       propertyPath: sounds.Array.data[15].volume
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
       propertyPath: sounds.Array.data[16].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 328138943566809672, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}
+      propertyPath: sounds.Array.data[17].volume
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 328138943566809673, guid: f432011d5f19c874a93e00d37563f5bf, type: 3}

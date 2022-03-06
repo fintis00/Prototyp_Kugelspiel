@@ -48,10 +48,10 @@ public class Pausemenu : MonoBehaviour
     }
     public void QuitGame()
     {
+        Debug.Log("test");
         Time.timeScale = 1f;
         gameIsPaused = false;
-        FindObjectOfType<AudioManager>().Stop("Level1");
-            FindObjectOfType<AudioManager>().Stop("Level"+ PlayerPrefs.GetInt("Scene", 0)+ "_background");
+        FindObjectOfType<AudioManager>().Stop("Level"+ PlayerPrefs.GetInt("Scene", 0)+ "_background");
         PlayerPrefs.SetInt("Coins", 0);
         FindObjectOfType<AudioManager>().Play("Hauptmenu");
         SceneManager.LoadScene("Menu");
