@@ -14,7 +14,7 @@ public class overworld_pause : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !gameIsPaused)
         {
-
+            Debug.Log("Pause");
             Pause();
             Cursor.visible = true;
         }
